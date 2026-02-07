@@ -1,0 +1,35 @@
+
+
+services:
+  backend:
+    build:
+      context: ./src/backend
+      dockerfile: Dockerfile
+    container_name: did-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./src/backend/uploads:/app/uploads
+      - ./src/backend/data:/app/data
+    env_file:
+      - ./src/backend/.env
+    restart: unless-stopped
+    networks:
+      - did-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: did-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - did-network
+
+networks:
+  did-network:
+    driver: bridge

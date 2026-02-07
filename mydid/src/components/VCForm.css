@@ -1,0 +1,89 @@
+body {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+}
+
+/* Container for centering */
+.vc-container {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Form styling */
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+/* Heading */
+form h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+.vc-container h2 {
+  color: white;
+  text-align: center;
+}
+/* Input fields */
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 2px solid #999;
+  outline: none;
+  transition: 0.3s;
+  color: #000000;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+
+form input::placeholder {
+  color: #666666;
+  font-weight: 500;
+  opacity: 1;
+}
+
+form input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+  border-width: 2px;
+}
+
+/* Button */
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+  transform: translateY(-2px);
+}
+
+.vcview-container {
+  background-color: white;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
